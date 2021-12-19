@@ -9,9 +9,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.statemachine.StateMachine;
 
-import info.nemowork.stateflow.statemachine.RFLFlowEvents;
-import info.nemowork.stateflow.statemachine.RFLFlowStates;
-
 @SpringBootApplication
 public class StateflowApplication implements ApplicationRunner{
 
@@ -25,10 +22,7 @@ public class StateflowApplication implements ApplicationRunner{
 
 	@Override
    public void run(ApplicationArguments arg0) throws Exception {
-      System.out.println("Hello World from Application Runner");
 	  stateMachine.start();
-	//   stateMachine.sendEvent(RFLFlowEvents.SUBMIT);
-	//   stateMachine.sendEvent(RFLFlowEvents.ARRROVE);
    }
 
 }

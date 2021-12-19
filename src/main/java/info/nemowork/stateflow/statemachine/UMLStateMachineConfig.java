@@ -10,7 +10,7 @@ import org.springframework.statemachine.uml.UmlStateMachineModelFactory;
 
 @Configuration
 @EnableStateMachine
-public class Config1 extends StateMachineConfigurerAdapter<String, String> {
+public class UMLStateMachineConfig extends StateMachineConfigurerAdapter<String, String> {
 
 	@Override
 	public void configure(StateMachineModelConfigurer<String, String> model) throws Exception {
