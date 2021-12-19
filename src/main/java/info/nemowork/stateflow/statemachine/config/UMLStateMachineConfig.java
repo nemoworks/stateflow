@@ -1,4 +1,4 @@
-package info.nemowork.stateflow.statemachine;
+package info.nemowork.stateflow.statemachine.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

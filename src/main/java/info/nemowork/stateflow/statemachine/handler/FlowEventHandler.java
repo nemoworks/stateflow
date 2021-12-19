@@ -1,4 +1,4 @@
-package info.nemowork.stateflow.event;
+package info.nemowork.stateflow.statemachine.handler;
 
 import java.util.HashMap;
 import java.util.Map;

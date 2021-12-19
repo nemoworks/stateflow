@@ -16,21 +16,18 @@ public class FlowController {
     @Autowired
     private StateMachine<String, String> stateMachine;
 
-
     @GetMapping(value = "/start")
     public boolean start() {
-        // stateMachine.startReactively();
+        stateMachine.startReactively().subscribe();
 
-        stateMachine.start();
         return stateMachine.hasStateMachineError();
     }
 
     @GetMapping(value = "/next")
     public boolean nextState() {
 
-        stateMachine.sendEvent("E1");
-    //  stateMachine.sendEvent(Mono.just(MessageBuilder.withPayload("E1").build()));
-     return stateMachine.hasStateMachineError();
+        stateMachine.sendEvent(Mono.just(MessageBuilder.withPayload("E1").build())).subscribe();
+        return stateMachine.hasStateMachineError();
 
     }
 
